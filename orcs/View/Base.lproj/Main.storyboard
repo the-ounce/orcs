@@ -154,12 +154,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="Gjd-nF-ux1"/>
                                 </constraints>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="667364400">
-                                    <!--2022-02-24 3:00:00 AM +0000-->
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="667436400">
+                                    <!--2022-02-24 11:00:00 PM +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="uk_UA"/>
                             </datePicker>
-                            <view contentMode="bottom" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tem-Mw-jDh" userLabel="Footer View" customClass="RoundUIView" customModule="orcs" customModuleProvider="target">
+                            <view contentMode="bottom" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tem-Mw-jDh" userLabel="Footer View">
                                 <rect key="frame" x="0.0" y="846" width="414" height="50"/>
                                 <color key="backgroundColor" red="0.21400000154972076" green="0.25699999928474426" blue="0.061000000685453415" alpha="0.5073985927152318" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -197,6 +197,8 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="YuD-uy-w2M" id="qY1-Ad-3xG"/>
+                        <outlet property="datePicker" destination="ffP-eI-Xge" id="zPZ-ax-bZ3"/>
+                        <outlet property="dayOfInvasionLabel" destination="wUM-81-Rcd" id="YOQ-s6-z5g"/>
                         <outlet property="personnelLossesLabel" destination="XIv-9e-FL7" id="dU9-t7-DXr"/>
                     </connections>
                 </viewController>

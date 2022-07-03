@@ -8,8 +8,10 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    @IBOutlet weak var dayOfInvasionLabel: UILabel!
     @IBOutlet weak var personnelLossesLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     var orcsManager = OrcsManager()
     var orcsLossesInfo: [Equipment]?
@@ -17,24 +19,53 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let minumumDateComponents = orcsManager.minimumInfoDateComponents()
         orcsManager.delegate = self
-        orcsManager.getData()
-
+        orcsManager.getData(for: minumumDateComponents)
         
+        
+        let maximumDate = orcsManager.maximumInfoDate()
+        let minumumDate = orcsManager.minimumInfoDate()
+        
+// Date Picker:
+        
+        datePicker.date = minumumDate
+        datePicker.maximumDate = maximumDate
+        // Date Picker request; Updating UI data
+        datePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
+        
+// Collectiong View:
         collectionView.register(CollectionViewCell.nib() , forCellWithReuseIdentifier: CollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
 
+
         
     }
 
+
     
 }
+
+//MARK: - UIDatePicker (concrete extension)
+
+extension MainViewController {
+    
+    @objc func dateChanged(_ sender: UIDatePicker) {
+        let date = Calendar.current.dateComponents([.year, .month, .day], from: sender.date)
+        orcsManager.getData(for: date)
+        
+        
+    }
+}
+
+
 //MARK: - OrcsManagerDelegate
 extension MainViewController: OrcsManagerDelegate {
     
     func didUpdateOrcsLossesInfo(_ orcsLossesInfo: (Personnel, [Equipment])) {
         self.orcsLossesInfo = orcsLossesInfo.1
+        dayOfInvasionLabel.text = orcsLossesInfo.0.stringDay
         personnelLossesLabel.text = orcsLossesInfo.0.stringAmount
         collectionView.reloadData()
     }

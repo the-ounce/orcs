@@ -9,8 +9,13 @@ import Foundation
 
 struct Personnel {
     let amount: Int
+    let day: Int
     
     var stringAmount: String {
         return String("~\(amount)")
+    }
+    
+    var stringDay: String {
+        return String(day)
     }
 }

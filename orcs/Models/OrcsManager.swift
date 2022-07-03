@@ -16,15 +16,33 @@ struct OrcsManager {
     
     var delegate: OrcsManagerDelegate?
     
-    var chosenDay: Int = 5
+    var totalInfoDays = 1
     
-    mutating func getData( ) {
-        performDataFetching()
-        chosenDay += 1
+    let fullScaleInvasionDate = DateComponents(year: 2022,  month: 2, day: 24)
+    var chosenDay: Int = 0
+    
+    func countInvasionDays( ) {
+        
     }
     
     
-    func performDataFetching( ) {
+    mutating func getData(for components: DateComponents) {
+        
+        if (components.day != nil), (components.month != nil), (components.year != nil) {
+            
+            let invasionDays = Calendar.current.dateComponents([.day], from: fullScaleInvasionDate, to: components).day! - 1
+
+            chosenDay = invasionDays
+            
+            performDataFetching()
+        }
+        
+        
+        
+    }
+    
+    
+    mutating func performDataFetching( ) {
         
         guard let urlPathToEquipment = Bundle.main.url(forResource: "russia_losses_equipment", withExtension: "json") else { return }
         
@@ -49,7 +67,7 @@ struct OrcsManager {
         
     }
     
-    func parseJSON(personnelData orcsPersonnelData: Data,
+    mutating func parseJSON(personnelData orcsPersonnelData: Data,
                    equipmentData orcsEquipmentData: Data) -> (Personnel,[Equipment])? {
         let decoder = JSONDecoder()
         
@@ -57,6 +75,8 @@ struct OrcsManager {
             let decodedPersonnelData = try decoder.decode(OrcsPersonnelData.self, from: orcsPersonnelData)
             let decodedEquipmentData = try decoder.decode(OrcsEquipmentData.self, from: orcsEquipmentData)
             
+            totalInfoDays = (decodedPersonnelData.info.count) + 1
+
             let personnelCardInfo = createPersonnelModel(decodedPersonnelData)
             let equipCardsInfo = createEquipmentModel(decodedEquipmentData)
     
@@ -72,10 +92,16 @@ struct OrcsManager {
     
     
     func createPersonnelModel(_ personnelData: OrcsPersonnelData) -> Personnel {
+        
+        print("Chosen Day: \(chosenDay)")
+        print("TotalInfoDays: \(totalInfoDays)")
+        print("InfoCount \(personnelData.info.count)")
+        
         let personnel = personnelData.info[chosenDay].personnel
+        let day = personnelData.info[chosenDay].day
+        let personnelInfo = Personnel(amount: personnel, day: day)
 //      let POW = personnelData.info[chosenDay].POW
         
-        let personnelInfo = Personnel(amount: personnel)
         
         return personnelInfo
     }
@@ -137,4 +163,38 @@ struct OrcsManager {
         return equipCardsInfo
     }
     
+    func maximumInfoDate() -> Date {
+        let invasionDays: Date = Calendar(identifier: .gregorian).date(from: fullScaleInvasionDate)!
+        
+        let maximumDate = Calendar.current.date(byAdding: DateComponents(day: totalInfoDays - 1), to: invasionDays)!
+        
+        return maximumDate
+    }
+    
+    func minimumInfoDate() -> Date {
+        let minimumDate: Date = Calendar(identifier: .gregorian).date(from: fullScaleInvasionDate)!
+        
+        return minimumDate
+    }
+    
+    func minimumInfoDateComponents() -> DateComponents {
+        let invasionDays: Date = Calendar(identifier: .gregorian).date(from: fullScaleInvasionDate)!
+        
+        let minimumDate = Calendar.current.date(byAdding: DateComponents(day: totalInfoDays), to: invasionDays)!
+        
+        let minimumDateComponents = Calendar.current.dateComponents([.year, .month, .day], from: minimumDate)
+        
+        return minimumDateComponents
+    }
+//
+//    func maximumInfoDateComponents() -> DateComponents {
+//        let invasionDays: Date = Calendar(identifier: .gregorian).date(from: fullScaleInvasionDate)!
+//
+//        let maximumDate = Calendar.current.date(byAdding: DateComponents(day: totalInfoDays), to: invasionDays)!
+//
+//        let maximumDateComponents = Calendar.current.dateComponents([.year, .month, .day], from: maximumDate)
+//
+//        return maximumDateComponents
+//    }
+//
 }
