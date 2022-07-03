@@ -9,21 +9,47 @@
 /* Begin PBXBuildFile section */
 		555309FB286F586200EB23C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555309FA286F586200EB23C3 /* AppDelegate.swift */; };
 		555309FD286F586200EB23C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555309FC286F586200EB23C3 /* SceneDelegate.swift */; };
-		555309FF286F586200EB23C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555309FE286F586200EB23C3 /* ViewController.swift */; };
+		555309FF286F586200EB23C3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555309FE286F586200EB23C3 /* MainViewController.swift */; };
 		55530A02286F586200EB23C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55530A00286F586200EB23C3 /* Main.storyboard */; };
 		55530A04286F586400EB23C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55530A03286F586400EB23C3 /* Assets.xcassets */; };
 		55530A07286F586400EB23C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55530A05286F586400EB23C3 /* LaunchScreen.storyboard */; };
+		55530A11286F591700EB23C3 /* OrcsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55530A10286F591700EB23C3 /* OrcsManager.swift */; };
+		55530A15286F5B1500EB23C3 /* BalsamiqSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55530A14286F5B1500EB23C3 /* BalsamiqSans-Regular.ttf */; };
+		55530A17286F5BCE00EB23C3 /* BalsamiqSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55530A16286F5BCE00EB23C3 /* BalsamiqSans-Bold.ttf */; };
+		55530A19286F6A0500EB23C3 /* OrcsEquipmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55530A18286F6A0500EB23C3 /* OrcsEquipmentData.swift */; };
+		55530A1B286F6A6E00EB23C3 /* OrcsPersonnelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55530A1A286F6A6E00EB23C3 /* OrcsPersonnelData.swift */; };
+		55530A1E286F6EB600EB23C3 /* russia_losses_personnel.json in Resources */ = {isa = PBXBuildFile; fileRef = 55530A1D286F6EB600EB23C3 /* russia_losses_personnel.json */; };
+		55530A20286F6F3C00EB23C3 /* russia_losses_equipment.json in Resources */ = {isa = PBXBuildFile; fileRef = 55530A1F286F6F3C00EB23C3 /* russia_losses_equipment.json */; };
+		55530A22286F73D700EB23C3 /* OrcsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55530A21286F73D700EB23C3 /* OrcsModel.swift */; };
+		55530A242870803B00EB23C3 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55530A232870803B00EB23C3 /* Equipment.swift */; };
+		55530A2D2870C05200EB23C3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55530A2B2870C05200EB23C3 /* CollectionViewCell.swift */; };
+		55530A2E2870C05200EB23C3 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55530A2C2870C05200EB23C3 /* CollectionViewCell.xib */; };
+		55DF59652871AC95007211B0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF59642871AC95007211B0 /* UIView+Extension.swift */; };
+		55DF59692871B214007211B0 /* CVCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF59682871B214007211B0 /* CVCell+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		555309F7286F586200EB23C3 /* orcs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = orcs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		555309FA286F586200EB23C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		555309FC286F586200EB23C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		555309FE286F586200EB23C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		555309FE286F586200EB23C3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		55530A01286F586200EB23C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55530A03286F586400EB23C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55530A06286F586400EB23C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55530A08286F586400EB23C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55530A10286F591700EB23C3 /* OrcsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcsManager.swift; sourceTree = "<group>"; };
+		55530A14286F5B1500EB23C3 /* BalsamiqSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BalsamiqSans-Regular.ttf"; path = "../../../../../../../Downloads/Balsamiq_Sans/BalsamiqSans-Regular.ttf"; sourceTree = "<group>"; };
+		55530A16286F5BCE00EB23C3 /* BalsamiqSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BalsamiqSans-Bold.ttf"; path = "../../../../../../../Downloads/Balsamiq_Sans/BalsamiqSans-Bold.ttf"; sourceTree = "<group>"; };
+		55530A18286F6A0500EB23C3 /* OrcsEquipmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcsEquipmentData.swift; sourceTree = "<group>"; };
+		55530A1A286F6A6E00EB23C3 /* OrcsPersonnelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcsPersonnelData.swift; sourceTree = "<group>"; };
+		55530A1D286F6EB600EB23C3 /* russia_losses_personnel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = russia_losses_personnel.json; sourceTree = "<group>"; };
+		55530A1F286F6F3C00EB23C3 /* russia_losses_equipment.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = russia_losses_equipment.json; sourceTree = "<group>"; };
+		55530A21286F73D700EB23C3 /* OrcsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcsModel.swift; sourceTree = "<group>"; };
+		55530A232870803B00EB23C3 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
+		55530A2B2870C05200EB23C3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		55530A2C2870C05200EB23C3 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		55DF59642871AC95007211B0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		55DF59682871B214007211B0 /* CVCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVCell+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +84,82 @@
 			children = (
 				555309FA286F586200EB23C3 /* AppDelegate.swift */,
 				555309FC286F586200EB23C3 /* SceneDelegate.swift */,
-				555309FE286F586200EB23C3 /* ViewController.swift */,
-				55530A00286F586200EB23C3 /* Main.storyboard */,
+				55530A12286F592300EB23C3 /* Models */,
+				55530A0E286F587B00EB23C3 /* Controllers */,
+				55530A2A2870C03600EB23C3 /* Cell */,
+				55530A0F286F589400EB23C3 /* View */,
+				55530A1C286F6E8500EB23C3 /* DataSource */,
+				55530A13286F5AFD00EB23C3 /* fonts */,
 				55530A03286F586400EB23C3 /* Assets.xcassets */,
 				55530A05286F586400EB23C3 /* LaunchScreen.storyboard */,
 				55530A08286F586400EB23C3 /* Info.plist */,
 			);
 			path = orcs;
+			sourceTree = "<group>";
+		};
+		55530A0E286F587B00EB23C3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				555309FE286F586200EB23C3 /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		55530A0F286F589400EB23C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55530A2F28717EAE00EB23C3 /* Extensions */,
+				55530A00286F586200EB23C3 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55530A12286F592300EB23C3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				55530A10286F591700EB23C3 /* OrcsManager.swift */,
+				55530A21286F73D700EB23C3 /* OrcsModel.swift */,
+				55530A18286F6A0500EB23C3 /* OrcsEquipmentData.swift */,
+				55530A1A286F6A6E00EB23C3 /* OrcsPersonnelData.swift */,
+				55530A232870803B00EB23C3 /* Equipment.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		55530A13286F5AFD00EB23C3 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				55530A14286F5B1500EB23C3 /* BalsamiqSans-Regular.ttf */,
+				55530A16286F5BCE00EB23C3 /* BalsamiqSans-Bold.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		55530A1C286F6E8500EB23C3 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				55530A1D286F6EB600EB23C3 /* russia_losses_personnel.json */,
+				55530A1F286F6F3C00EB23C3 /* russia_losses_equipment.json */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		55530A2A2870C03600EB23C3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				55530A2B2870C05200EB23C3 /* CollectionViewCell.swift */,
+				55530A2C2870C05200EB23C3 /* CollectionViewCell.xib */,
+				55DF59682871B214007211B0 /* CVCell+Extension.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		55530A2F28717EAE00EB23C3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				55DF59642871AC95007211B0 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +220,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55530A1E286F6EB600EB23C3 /* russia_losses_personnel.json in Resources */,
 				55530A07286F586400EB23C3 /* LaunchScreen.storyboard in Resources */,
 				55530A04286F586400EB23C3 /* Assets.xcassets in Resources */,
+				55530A20286F6F3C00EB23C3 /* russia_losses_equipment.json in Resources */,
+				55530A15286F5B1500EB23C3 /* BalsamiqSans-Regular.ttf in Resources */,
+				55530A17286F5BCE00EB23C3 /* BalsamiqSans-Bold.ttf in Resources */,
+				55530A2E2870C05200EB23C3 /* CollectionViewCell.xib in Resources */,
 				55530A02286F586200EB23C3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +238,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				555309FF286F586200EB23C3 /* ViewController.swift in Sources */,
+				555309FF286F586200EB23C3 /* MainViewController.swift in Sources */,
 				555309FB286F586200EB23C3 /* AppDelegate.swift in Sources */,
+				55DF59652871AC95007211B0 /* UIView+Extension.swift in Sources */,
+				55530A2D2870C05200EB23C3 /* CollectionViewCell.swift in Sources */,
+				55530A242870803B00EB23C3 /* Equipment.swift in Sources */,
+				55530A11286F591700EB23C3 /* OrcsManager.swift in Sources */,
+				55DF59692871B214007211B0 /* CVCell+Extension.swift in Sources */,
+				55530A22286F73D700EB23C3 /* OrcsModel.swift in Sources */,
+				55530A1B286F6A6E00EB23C3 /* OrcsPersonnelData.swift in Sources */,
+				55530A19286F6A0500EB23C3 /* OrcsEquipmentData.swift in Sources */,
 				555309FD286F586200EB23C3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +400,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -319,6 +428,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
