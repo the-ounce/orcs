@@ -8,6 +8,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    @IBOutlet weak var personnelLossesLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var orcsManager = OrcsManager()
@@ -19,10 +20,6 @@ class MainViewController: UIViewController {
         orcsManager.delegate = self
         orcsManager.getData()
 
-//        let layout = UICollectionViewFlowLayout()
-//        layout.itemSize = CGSize(width: 150, height: 150)
-//
-//        collectionView.collectionViewLayout = layout
         
         collectionView.register(CollectionViewCell.nib() , forCellWithReuseIdentifier: CollectionViewCell.identifier)
         collectionView.delegate = self
@@ -32,20 +29,13 @@ class MainViewController: UIViewController {
     }
 
     
-    
-
-    @IBAction func goButtonPressed(_ sender: Any) {
-        orcsManager.getData()
-    }
-    
-
-    
 }
 //MARK: - OrcsManagerDelegate
 extension MainViewController: OrcsManagerDelegate {
     
-    func didUpdateOrcsLossesInfo(_ orcsLossesInfo: [Equipment]) {
-        self.orcsLossesInfo = orcsLossesInfo
+    func didUpdateOrcsLossesInfo(_ orcsLossesInfo: (Personnel, [Equipment])) {
+        self.orcsLossesInfo = orcsLossesInfo.1
+        personnelLossesLabel.text = orcsLossesInfo.0.stringAmount
         collectionView.reloadData()
     }
     
@@ -89,7 +79,7 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
         
         let collectionWidth = collectionView.bounds.width
         let collectionHeight = collectionView.bounds.height
-        return CGSize(width: collectionWidth - 20, height: collectionHeight / 5)
+        return CGSize(width: collectionWidth - 20, height: collectionHeight / 3)
     }
     
 }

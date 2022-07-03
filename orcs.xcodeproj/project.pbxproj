@@ -14,8 +14,6 @@
 		55530A04286F586400EB23C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55530A03286F586400EB23C3 /* Assets.xcassets */; };
 		55530A07286F586400EB23C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55530A05286F586400EB23C3 /* LaunchScreen.storyboard */; };
 		55530A11286F591700EB23C3 /* OrcsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55530A10286F591700EB23C3 /* OrcsManager.swift */; };
-		55530A15286F5B1500EB23C3 /* BalsamiqSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55530A14286F5B1500EB23C3 /* BalsamiqSans-Regular.ttf */; };
-		55530A17286F5BCE00EB23C3 /* BalsamiqSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55530A16286F5BCE00EB23C3 /* BalsamiqSans-Bold.ttf */; };
 		55530A19286F6A0500EB23C3 /* OrcsEquipmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55530A18286F6A0500EB23C3 /* OrcsEquipmentData.swift */; };
 		55530A1B286F6A6E00EB23C3 /* OrcsPersonnelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55530A1A286F6A6E00EB23C3 /* OrcsPersonnelData.swift */; };
 		55530A1E286F6EB600EB23C3 /* russia_losses_personnel.json in Resources */ = {isa = PBXBuildFile; fileRef = 55530A1D286F6EB600EB23C3 /* russia_losses_personnel.json */; };
@@ -26,6 +24,7 @@
 		55530A2E2870C05200EB23C3 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55530A2C2870C05200EB23C3 /* CollectionViewCell.xib */; };
 		55DF59652871AC95007211B0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF59642871AC95007211B0 /* UIView+Extension.swift */; };
 		55DF59692871B214007211B0 /* CVCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF59682871B214007211B0 /* CVCell+Extension.swift */; };
+		55E2D1452871C4350013B4FE /* Personnel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E2D1442871C4350013B4FE /* Personnel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +37,6 @@
 		55530A06286F586400EB23C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55530A08286F586400EB23C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55530A10286F591700EB23C3 /* OrcsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcsManager.swift; sourceTree = "<group>"; };
-		55530A14286F5B1500EB23C3 /* BalsamiqSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BalsamiqSans-Regular.ttf"; path = "../../../../../../../Downloads/Balsamiq_Sans/BalsamiqSans-Regular.ttf"; sourceTree = "<group>"; };
-		55530A16286F5BCE00EB23C3 /* BalsamiqSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BalsamiqSans-Bold.ttf"; path = "../../../../../../../Downloads/Balsamiq_Sans/BalsamiqSans-Bold.ttf"; sourceTree = "<group>"; };
 		55530A18286F6A0500EB23C3 /* OrcsEquipmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcsEquipmentData.swift; sourceTree = "<group>"; };
 		55530A1A286F6A6E00EB23C3 /* OrcsPersonnelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcsPersonnelData.swift; sourceTree = "<group>"; };
 		55530A1D286F6EB600EB23C3 /* russia_losses_personnel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = russia_losses_personnel.json; sourceTree = "<group>"; };
@@ -50,6 +47,7 @@
 		55530A2C2870C05200EB23C3 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		55DF59642871AC95007211B0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		55DF59682871B214007211B0 /* CVCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVCell+Extension.swift"; sourceTree = "<group>"; };
+		55E2D1442871C4350013B4FE /* Personnel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personnel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +87,6 @@
 				55530A2A2870C03600EB23C3 /* Cell */,
 				55530A0F286F589400EB23C3 /* View */,
 				55530A1C286F6E8500EB23C3 /* DataSource */,
-				55530A13286F5AFD00EB23C3 /* fonts */,
 				55530A03286F586400EB23C3 /* Assets.xcassets */,
 				55530A05286F586400EB23C3 /* LaunchScreen.storyboard */,
 				55530A08286F586400EB23C3 /* Info.plist */,
@@ -122,17 +119,9 @@
 				55530A18286F6A0500EB23C3 /* OrcsEquipmentData.swift */,
 				55530A1A286F6A6E00EB23C3 /* OrcsPersonnelData.swift */,
 				55530A232870803B00EB23C3 /* Equipment.swift */,
+				55E2D1442871C4350013B4FE /* Personnel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		55530A13286F5AFD00EB23C3 /* fonts */ = {
-			isa = PBXGroup;
-			children = (
-				55530A14286F5B1500EB23C3 /* BalsamiqSans-Regular.ttf */,
-				55530A16286F5BCE00EB23C3 /* BalsamiqSans-Bold.ttf */,
-			);
-			path = fonts;
 			sourceTree = "<group>";
 		};
 		55530A1C286F6E8500EB23C3 /* DataSource */ = {
@@ -224,8 +213,6 @@
 				55530A07286F586400EB23C3 /* LaunchScreen.storyboard in Resources */,
 				55530A04286F586400EB23C3 /* Assets.xcassets in Resources */,
 				55530A20286F6F3C00EB23C3 /* russia_losses_equipment.json in Resources */,
-				55530A15286F5B1500EB23C3 /* BalsamiqSans-Regular.ttf in Resources */,
-				55530A17286F5BCE00EB23C3 /* BalsamiqSans-Bold.ttf in Resources */,
 				55530A2E2870C05200EB23C3 /* CollectionViewCell.xib in Resources */,
 				55530A02286F586200EB23C3 /* Main.storyboard in Resources */,
 			);
@@ -246,6 +233,7 @@
 				55530A11286F591700EB23C3 /* OrcsManager.swift in Sources */,
 				55DF59692871B214007211B0 /* CVCell+Extension.swift in Sources */,
 				55530A22286F73D700EB23C3 /* OrcsModel.swift in Sources */,
+				55E2D1452871C4350013B4FE /* Personnel.swift in Sources */,
 				55530A1B286F6A6E00EB23C3 /* OrcsPersonnelData.swift in Sources */,
 				55530A19286F6A0500EB23C3 /* OrcsEquipmentData.swift in Sources */,
 				555309FD286F586200EB23C3 /* SceneDelegate.swift in Sources */,

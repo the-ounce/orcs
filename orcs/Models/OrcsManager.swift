@@ -8,7 +8,7 @@
 import Foundation
 
 protocol OrcsManagerDelegate {
-    func didUpdateOrcsLossesInfo(_ orcsLossesInfo: [Equipment])
+    func didUpdateOrcsLossesInfo(_ orcsLossesInfo: (Personnel, [Equipment]))
     func didFailWithError(error: Error)
 }
 
@@ -16,7 +16,7 @@ struct OrcsManager {
     
     var delegate: OrcsManagerDelegate?
     
-    var chosenDay: Int = 0
+    var chosenDay: Int = 5
     
     mutating func getData( ) {
         performDataFetching()
@@ -50,16 +50,17 @@ struct OrcsManager {
     }
     
     func parseJSON(personnelData orcsPersonnelData: Data,
-                   equipmentData orcsEquipmentData: Data) -> [Equipment]? {
+                   equipmentData orcsEquipmentData: Data) -> (Personnel,[Equipment])? {
         let decoder = JSONDecoder()
         
         do {
             let decodedPersonnelData = try decoder.decode(OrcsPersonnelData.self, from: orcsPersonnelData)
             let decodedEquipmentData = try decoder.decode(OrcsEquipmentData.self, from: orcsEquipmentData)
             
-            let equipCardsInfo = createOrcsModel(decodedPersonnelData, decodedEquipmentData)
+            let personnelCardInfo = createPersonnelModel(decodedPersonnelData)
+            let equipCardsInfo = createEquipmentModel(decodedEquipmentData)
     
-            return equipCardsInfo
+            return (personnelCardInfo, equipCardsInfo)
             
         } catch {
             print("Error: \(error)")
@@ -70,15 +71,18 @@ struct OrcsManager {
     }
     
     
-    func createOrcsModel(_ personnelData: OrcsPersonnelData,
-                         _ equipData: OrcsEquipmentData) -> [Equipment] {
-        
-        let date = personnelData.info[chosenDay].date
-        let day = personnelData.info[chosenDay].day
-        
+    func createPersonnelModel(_ personnelData: OrcsPersonnelData) -> Personnel {
         let personnel = personnelData.info[chosenDay].personnel
-        let POW = personnelData.info[chosenDay].POW
+//      let POW = personnelData.info[chosenDay].POW
         
+        let personnelInfo = Personnel(amount: personnel)
+        
+        return personnelInfo
+    }
+    
+    
+    func createEquipmentModel(_ equipData: OrcsEquipmentData) -> [Equipment] {
+            
         let (aircraft,
              helicopter,
              tank,
@@ -108,26 +112,6 @@ struct OrcsManager {
                                 equipData.info[chosenDay].mobileSRBMSystem,
                                 equipData.info[chosenDay].vehiclesAndFuelTanks,
                                 equipData.info[chosenDay].cruiseMissiles)
-        
-//        let orcs = OrcsModel(date: date,
-//                             day: day,
-//                             personnel: personnel,
-//                             POW: POW)
-//                             aircraft: aircraft,
-//                             helicopter: helicopter,
-//                             tank: tank,
-//                             apc: apc,
-//                             fieldArtillery: fieldArtillery,
-//                             mrl: mrl,
-//                             drone: drone,
-//                             navalShip: navalShip,
-//                             antiAircraftWarfare: antiAircraftWarfare,
-//                             militaryAuto: militaryAuto,
-//                             fuelTank: fuelTank,
-//                             specialEquipment: specialEquipment,
-//                             mobileSRBMSystem: mobileSRBMSystem,
-//                             vehiclesAndFuelTanks: vehiclesAndFuelTanks,
-//                             cruiseMissiles: cruiseMissiles)
         
         var equipCardsInfo: [Equipment] = [
             Equipment(title: "Літаки", amount: aircraft, image: "helicopter"),

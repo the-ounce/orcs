@@ -19,8 +19,6 @@ struct Equipment {
 
 }
 
-
-
 extension Equipment {
     
     func amountIsNil() -> Bool {
