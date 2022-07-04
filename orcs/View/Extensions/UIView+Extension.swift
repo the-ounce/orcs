@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-@IBDesignable
+//@IBDesignable
 class RoundUIView: UIView {
 
     @IBInspectable var borderWidth: CGFloat {

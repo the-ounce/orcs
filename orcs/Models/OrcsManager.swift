@@ -16,10 +16,13 @@ struct OrcsManager {
     
     var delegate: OrcsManagerDelegate?
     
-    var totalInfoDays = 1
-    
     let fullScaleInvasionDate = DateComponents(year: 2022,  month: 2, day: 24)
+    
+    var totalInfoDays = 1
     var chosenDay: Int = 0
+    
+    var infoForChosenDay: (Personnel, [Equipment])?
+    var idForSelectedCard: Int?
     
     mutating func getData(for components: DateComponents) {
         
@@ -71,6 +74,9 @@ struct OrcsManager {
 
             let personnelCardInfo = createPersonnelModel(decodedPersonnelData)
             let equipCardsInfo = createEquipmentModel(decodedEquipmentData)
+            
+            // Update variable to have info about chosen day
+            infoForChosenDay = (personnelCardInfo, equipCardsInfo)
     
             return (personnelCardInfo, equipCardsInfo)
             

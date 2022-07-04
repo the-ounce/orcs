@@ -21,6 +21,8 @@
 		55530A242870803B00EB23C3 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55530A232870803B00EB23C3 /* Equipment.swift */; };
 		55530A2D2870C05200EB23C3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55530A2B2870C05200EB23C3 /* CollectionViewCell.swift */; };
 		55530A2E2870C05200EB23C3 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55530A2C2870C05200EB23C3 /* CollectionViewCell.xib */; };
+		55B78D8C28730729003639A1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B78D8B28730729003639A1 /* DetailsViewController.swift */; };
+		55B78D8E28731051003639A1 /* DetailsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B78D8D28731051003639A1 /* DetailsManager.swift */; };
 		55DF59652871AC95007211B0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF59642871AC95007211B0 /* UIView+Extension.swift */; };
 		55DF59692871B214007211B0 /* CVCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF59682871B214007211B0 /* CVCell+Extension.swift */; };
 		55E2D1452871C4350013B4FE /* Personnel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E2D1442871C4350013B4FE /* Personnel.swift */; };
@@ -43,6 +45,8 @@
 		55530A232870803B00EB23C3 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
 		55530A2B2870C05200EB23C3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		55530A2C2870C05200EB23C3 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		55B78D8B28730729003639A1 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		55B78D8D28731051003639A1 /* DetailsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsManager.swift; sourceTree = "<group>"; };
 		55DF59642871AC95007211B0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		55DF59682871B214007211B0 /* CVCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVCell+Extension.swift"; sourceTree = "<group>"; };
 		55E2D1442871C4350013B4FE /* Personnel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personnel.swift; sourceTree = "<group>"; };
@@ -82,8 +86,8 @@
 				555309FC286F586200EB23C3 /* SceneDelegate.swift */,
 				55530A12286F592300EB23C3 /* Models */,
 				55530A0E286F587B00EB23C3 /* Controllers */,
-				55530A2A2870C03600EB23C3 /* Cell */,
 				55530A0F286F589400EB23C3 /* View */,
+				55530A2A2870C03600EB23C3 /* Cell */,
 				55530A1C286F6E8500EB23C3 /* DataSource */,
 				55530A03286F586400EB23C3 /* Assets.xcassets */,
 				55530A05286F586400EB23C3 /* LaunchScreen.storyboard */,
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				555309FE286F586200EB23C3 /* MainViewController.swift */,
+				55B78D8B28730729003639A1 /* DetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 				55530A1A286F6A6E00EB23C3 /* OrcsPersonnelData.swift */,
 				55530A232870803B00EB23C3 /* Equipment.swift */,
 				55E2D1442871C4350013B4FE /* Personnel.swift */,
+				55B78D8D28731051003639A1 /* DetailsManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -227,12 +233,14 @@
 				55DF59652871AC95007211B0 /* UIView+Extension.swift in Sources */,
 				55530A2D2870C05200EB23C3 /* CollectionViewCell.swift in Sources */,
 				55530A242870803B00EB23C3 /* Equipment.swift in Sources */,
+				55B78D8E28731051003639A1 /* DetailsManager.swift in Sources */,
 				55530A11286F591700EB23C3 /* OrcsManager.swift in Sources */,
 				55DF59692871B214007211B0 /* CVCell+Extension.swift in Sources */,
 				55E2D1452871C4350013B4FE /* Personnel.swift in Sources */,
 				55530A1B286F6A6E00EB23C3 /* OrcsPersonnelData.swift in Sources */,
 				55530A19286F6A0500EB23C3 /* OrcsEquipmentData.swift in Sources */,
 				555309FD286F586200EB23C3 /* SceneDelegate.swift in Sources */,
+				55B78D8C28730729003639A1 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

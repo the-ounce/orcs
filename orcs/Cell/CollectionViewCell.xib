@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,6 +18,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="345" height="130"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z54-8o-tku">
+                        <rect key="frame" x="315" y="102" width="25" height="21"/>
+                        <color key="tintColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="9Ib-GI-cpP"/>
+                            <constraint firstAttribute="width" constant="25" id="e8c-m1-ipK"/>
+                        </constraints>
+                        <imageReference key="image" image="info.circle" catalog="system" symbolScale="small"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                    </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JOv-Oy-o3S">
                         <rect key="frame" x="0.0" y="0.0" width="345" height="130"/>
                         <subviews>
@@ -74,12 +85,14 @@
             <constraints>
                 <constraint firstItem="JOv-Oy-o3S" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2XZ-9w-ylv"/>
                 <constraint firstAttribute="bottom" secondItem="JOv-Oy-o3S" secondAttribute="bottom" id="6Hr-a7-Ch1"/>
+                <constraint firstAttribute="trailing" secondItem="Z54-8o-tku" secondAttribute="trailing" constant="5" id="91q-xN-nqf"/>
                 <constraint firstItem="phe-1S-OzB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DPs-QH-c9j"/>
                 <constraint firstAttribute="trailing" secondItem="phe-1S-OzB" secondAttribute="trailing" id="JO4-T3-riq"/>
                 <constraint firstAttribute="bottom" secondItem="phe-1S-OzB" secondAttribute="bottom" id="XIl-dV-r8F"/>
                 <constraint firstItem="phe-1S-OzB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="aU0-7t-EF6"/>
                 <constraint firstItem="JOv-Oy-o3S" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jWf-1i-v7H"/>
                 <constraint firstAttribute="trailing" secondItem="JOv-Oy-o3S" secondAttribute="trailing" id="yQY-Ev-EyA"/>
+                <constraint firstAttribute="bottom" secondItem="Z54-8o-tku" secondAttribute="bottom" constant="5" id="zEy-5a-X1y"/>
             </constraints>
             <size key="customSize" width="345" height="130"/>
             <userDefinedRuntimeAttributes>
@@ -97,6 +110,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

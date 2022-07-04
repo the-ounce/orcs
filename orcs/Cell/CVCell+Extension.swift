@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-@IBDesignable
+//@IBDesignable
 class RoundCollectionViewCell: CollectionViewCell {
 
     @IBInspectable var cornerRadius: CGFloat {
