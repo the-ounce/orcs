@@ -9,6 +9,7 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var amountLabel: UILabel!
@@ -27,6 +28,7 @@ class CollectionViewCell: UICollectionViewCell {
         amountLabel.text = information.stringAmount
         titleLabel.text = information.title
         imageView.image = UIImage(named: information.image)
+        backgroundImageView.image = UIImage(named: information.image)
         
         
     }

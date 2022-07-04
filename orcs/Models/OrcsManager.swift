@@ -21,24 +21,18 @@ struct OrcsManager {
     let fullScaleInvasionDate = DateComponents(year: 2022,  month: 2, day: 24)
     var chosenDay: Int = 0
     
-    func countInvasionDays( ) {
-        
-    }
-    
-    
     mutating func getData(for components: DateComponents) {
         
         if (components.day != nil), (components.month != nil), (components.year != nil) {
             
+            // How many days from the beggining of the invasion till the chosen date
             let invasionDays = Calendar.current.dateComponents([.day], from: fullScaleInvasionDate, to: components).day! - 1
-
+            
+            // Number of invasion days = user's chosen (invasion) day
             chosenDay = invasionDays
             
             performDataFetching()
         }
-        
-        
-        
     }
     
     
@@ -59,12 +53,9 @@ struct OrcsManager {
             }
             
             return
-            
         } catch {
             print("error: \(error)")
         }
-        
-        
     }
     
     mutating func parseJSON(personnelData orcsPersonnelData: Data,
@@ -75,6 +66,7 @@ struct OrcsManager {
             let decodedPersonnelData = try decoder.decode(OrcsPersonnelData.self, from: orcsPersonnelData)
             let decodedEquipmentData = try decoder.decode(OrcsEquipmentData.self, from: orcsEquipmentData)
             
+            // Count and set how many days are in Personnel JSON
             totalInfoDays = (decodedPersonnelData.info.count) + 1
 
             let personnelCardInfo = createPersonnelModel(decodedPersonnelData)
@@ -91,21 +83,17 @@ struct OrcsManager {
     }
     
     
+// MARK: - Create Personnel & Equip Models
     func createPersonnelModel(_ personnelData: OrcsPersonnelData) -> Personnel {
-        
-        print("Chosen Day: \(chosenDay)")
-        print("TotalInfoDays: \(totalInfoDays)")
-        print("InfoCount \(personnelData.info.count)")
         
         let personnel = personnelData.info[chosenDay].personnel
         let day = personnelData.info[chosenDay].day
+        
         let personnelInfo = Personnel(amount: personnel, day: day)
 //      let POW = personnelData.info[chosenDay].POW
         
-        
         return personnelInfo
     }
-    
     
     func createEquipmentModel(_ equipData: OrcsEquipmentData) -> [Equipment] {
             
@@ -140,21 +128,21 @@ struct OrcsManager {
                                 equipData.info[chosenDay].cruiseMissiles)
         
         var equipCardsInfo: [Equipment] = [
-            Equipment(title: "Літаки", amount: aircraft, image: "helicopter"),
+            Equipment(title: "Літаки", amount: aircraft, image: "aircraft"),
             Equipment(title: "Гелікоптери", amount: helicopter, image: "helicopter"),
-            Equipment(title: "Танки", amount: tank, image: "helicopter"),
-            Equipment(title: "БТР", amount: apc, image: "helicopter"),
-            Equipment(title: "Польова артилерія", amount: fieldArtillery, image: "helicopter"),
-            Equipment(title: "РСЗВ", amount: mrl, image: "helicopter"),
-            Equipment(title: "Дрони", amount: drone, image: "helicopter"),
-            Equipment(title: "Кораблі", amount: navalShip, image: "helicopter"),
-            Equipment(title: "ББМ", amount: militaryAuto, image: "helicopter"),
-            Equipment(title: "Цистерни з ППМ", amount: fuelTank, image: "helicopter"),
-            Equipment(title: "Засоби ППО", amount: antiAircraftWarfare, image: "helicopter"),
-            Equipment(title: "Спецтехніка", amount: specialEquipment, image: "helicopter"),
-            Equipment(title: "Установки ОТРК", amount: mobileSRBMSystem, image: "helicopter"),
-            Equipment(title: "Автотехніка", amount: vehiclesAndFuelTanks, image: "helicopter"),
-            Equipment(title: "Крилаті Ракети", amount: cruiseMissiles, image: "helicopter")
+            Equipment(title: "Танки", amount: tank, image: "tank"),
+            Equipment(title: "БТР", amount: apc, image: "apc"),
+            Equipment(title: "Польова артилерія", amount: fieldArtillery, image: "fieldArtillery"),
+            Equipment(title: "РСЗВ", amount: mrl, image: "mrl"),
+            Equipment(title: "Дрони", amount: drone, image: "drone"),
+            Equipment(title: "Кораблі", amount: navalShip, image: "navalShip"),
+            Equipment(title: "ББМ", amount: militaryAuto, image: "militaryAuto"),
+            Equipment(title: "Цистерни з ППМ", amount: fuelTank, image: "fuelTank"),
+            Equipment(title: "Засоби ППО", amount: antiAircraftWarfare, image: "antiAircraftWarfare"),
+            Equipment(title: "Спецтехніка", amount: specialEquipment, image: "specialEquipment"),
+            Equipment(title: "Установки ОТРК", amount: mobileSRBMSystem, image: "mobileSRBMSystem"),
+            Equipment(title: "Автотехніка", amount: vehiclesAndFuelTanks, image: "vehiclesAndFuelTanks"),
+            Equipment(title: "Крилаті Ракети", amount: cruiseMissiles, image: "cruiseMissiles")
         ]
         
         // remove Objects with nil attributes
@@ -163,6 +151,7 @@ struct OrcsManager {
         return equipCardsInfo
     }
     
+//MARK: - Date-related
     func maximumInfoDate() -> Date {
         let invasionDays: Date = Calendar(identifier: .gregorian).date(from: fullScaleInvasionDate)!
         
@@ -186,15 +175,4 @@ struct OrcsManager {
         
         return minimumDateComponents
     }
-//
-//    func maximumInfoDateComponents() -> DateComponents {
-//        let invasionDays: Date = Calendar(identifier: .gregorian).date(from: fullScaleInvasionDate)!
-//
-//        let maximumDate = Calendar.current.date(byAdding: DateComponents(day: totalInfoDays), to: invasionDays)!
-//
-//        let maximumDateComponents = Calendar.current.dateComponents([.year, .month, .day], from: maximumDate)
-//
-//        return maximumDateComponents
-//    }
-//
 }

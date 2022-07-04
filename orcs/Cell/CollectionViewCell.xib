@@ -17,9 +17,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="345" height="130"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helicopter" translatesAutoresizingMaskIntoConstraints="NO" id="Ljr-2I-OvE">
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JOv-Oy-o3S">
                         <rect key="frame" x="0.0" y="0.0" width="345" height="130"/>
-                    </imageView>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ljr-2I-OvE">
+                                <rect key="frame" x="0.0" y="0.0" width="345" height="130"/>
+                            </imageView>
+                        </subviews>
+                    </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="phe-1S-OzB">
                         <rect key="frame" x="0.0" y="0.0" width="345" height="130"/>
                         <subviews>
@@ -67,14 +72,14 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" systemColor="systemGray6Color"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Ljr-2I-OvE" secondAttribute="bottom" id="8o6-jQ-uMQ"/>
-                <constraint firstAttribute="trailing" secondItem="Ljr-2I-OvE" secondAttribute="trailing" id="9Tt-uA-ZbR"/>
-                <constraint firstItem="Ljr-2I-OvE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Czf-3b-KyB"/>
+                <constraint firstItem="JOv-Oy-o3S" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2XZ-9w-ylv"/>
+                <constraint firstAttribute="bottom" secondItem="JOv-Oy-o3S" secondAttribute="bottom" id="6Hr-a7-Ch1"/>
                 <constraint firstItem="phe-1S-OzB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DPs-QH-c9j"/>
                 <constraint firstAttribute="trailing" secondItem="phe-1S-OzB" secondAttribute="trailing" id="JO4-T3-riq"/>
-                <constraint firstItem="Ljr-2I-OvE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="NVq-iE-Pc0"/>
                 <constraint firstAttribute="bottom" secondItem="phe-1S-OzB" secondAttribute="bottom" id="XIl-dV-r8F"/>
                 <constraint firstItem="phe-1S-OzB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="aU0-7t-EF6"/>
+                <constraint firstItem="JOv-Oy-o3S" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jWf-1i-v7H"/>
+                <constraint firstAttribute="trailing" secondItem="JOv-Oy-o3S" secondAttribute="trailing" id="yQY-Ev-EyA"/>
             </constraints>
             <size key="customSize" width="345" height="130"/>
             <userDefinedRuntimeAttributes>
@@ -84,6 +89,7 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="amountLabel" destination="Jvi-eS-GdN" id="Hj2-rF-zrZ"/>
+                <outlet property="backgroundImageView" destination="Ljr-2I-OvE" id="bht-cT-Nfp"/>
                 <outlet property="imageView" destination="S8R-w7-mpP" id="hem-5W-lqY"/>
                 <outlet property="titleLabel" destination="hvf-le-rGP" id="szG-CN-Q1i"/>
             </connections>
@@ -91,7 +97,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="helicopter" width="512" height="512"/>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

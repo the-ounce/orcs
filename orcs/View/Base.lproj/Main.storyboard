@@ -149,7 +149,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </collectionView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="ffP-eI-Xge">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" toolTip="Day of war" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="ffP-eI-Xge">
                                 <rect key="frame" x="0.0" y="731" width="414" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="Gjd-nF-ux1"/>

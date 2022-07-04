@@ -28,7 +28,6 @@ class MainViewController: UIViewController {
         let minumumDate = orcsManager.minimumInfoDate()
         
 // Date Picker:
-        
         datePicker.date = minumumDate
         datePicker.maximumDate = maximumDate
         // Date Picker request; Updating UI data
@@ -38,9 +37,6 @@ class MainViewController: UIViewController {
         collectionView.register(CollectionViewCell.nib() , forCellWithReuseIdentifier: CollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
-
-
-        
     }
 
 
@@ -54,8 +50,6 @@ extension MainViewController {
     @objc func dateChanged(_ sender: UIDatePicker) {
         let date = Calendar.current.dateComponents([.year, .month, .day], from: sender.date)
         orcsManager.getData(for: date)
-        
-        
     }
 }
 
@@ -71,7 +65,7 @@ extension MainViewController: OrcsManagerDelegate {
     }
     
     func didFailWithError(error: Error) {
-        
+        print("Error: \(error)")
     }
 }
 

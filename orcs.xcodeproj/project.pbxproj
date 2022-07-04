@@ -18,7 +18,6 @@
 		55530A1B286F6A6E00EB23C3 /* OrcsPersonnelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55530A1A286F6A6E00EB23C3 /* OrcsPersonnelData.swift */; };
 		55530A1E286F6EB600EB23C3 /* russia_losses_personnel.json in Resources */ = {isa = PBXBuildFile; fileRef = 55530A1D286F6EB600EB23C3 /* russia_losses_personnel.json */; };
 		55530A20286F6F3C00EB23C3 /* russia_losses_equipment.json in Resources */ = {isa = PBXBuildFile; fileRef = 55530A1F286F6F3C00EB23C3 /* russia_losses_equipment.json */; };
-		55530A22286F73D700EB23C3 /* OrcsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55530A21286F73D700EB23C3 /* OrcsModel.swift */; };
 		55530A242870803B00EB23C3 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55530A232870803B00EB23C3 /* Equipment.swift */; };
 		55530A2D2870C05200EB23C3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55530A2B2870C05200EB23C3 /* CollectionViewCell.swift */; };
 		55530A2E2870C05200EB23C3 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55530A2C2870C05200EB23C3 /* CollectionViewCell.xib */; };
@@ -41,7 +40,6 @@
 		55530A1A286F6A6E00EB23C3 /* OrcsPersonnelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcsPersonnelData.swift; sourceTree = "<group>"; };
 		55530A1D286F6EB600EB23C3 /* russia_losses_personnel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = russia_losses_personnel.json; sourceTree = "<group>"; };
 		55530A1F286F6F3C00EB23C3 /* russia_losses_equipment.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = russia_losses_equipment.json; sourceTree = "<group>"; };
-		55530A21286F73D700EB23C3 /* OrcsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcsModel.swift; sourceTree = "<group>"; };
 		55530A232870803B00EB23C3 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
 		55530A2B2870C05200EB23C3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		55530A2C2870C05200EB23C3 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				55530A10286F591700EB23C3 /* OrcsManager.swift */,
-				55530A21286F73D700EB23C3 /* OrcsModel.swift */,
 				55530A18286F6A0500EB23C3 /* OrcsEquipmentData.swift */,
 				55530A1A286F6A6E00EB23C3 /* OrcsPersonnelData.swift */,
 				55530A232870803B00EB23C3 /* Equipment.swift */,
@@ -232,7 +229,6 @@
 				55530A242870803B00EB23C3 /* Equipment.swift in Sources */,
 				55530A11286F591700EB23C3 /* OrcsManager.swift in Sources */,
 				55DF59692871B214007211B0 /* CVCell+Extension.swift in Sources */,
-				55530A22286F73D700EB23C3 /* OrcsModel.swift in Sources */,
 				55E2D1452871C4350013B4FE /* Personnel.swift in Sources */,
 				55530A1B286F6A6E00EB23C3 /* OrcsPersonnelData.swift in Sources */,
 				55530A19286F6A0500EB23C3 /* OrcsEquipmentData.swift in Sources */,
