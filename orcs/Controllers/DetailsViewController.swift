@@ -16,6 +16,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     
     var detailsManager = DetailsManager()
+    var orcsManager = OrcsManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,7 @@ class DetailsViewController: UIViewController {
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
+        // reset elementId
         self.dismiss(animated: true)
     }
     

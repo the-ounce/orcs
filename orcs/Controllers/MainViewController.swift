@@ -10,6 +10,7 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var dayOfInvasionLabel: UILabel!
     @IBOutlet weak var personnelLossesLabel: UILabel!
+    @IBOutlet weak var personnelLossesView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var datePicker: UIDatePicker!
     
@@ -36,6 +37,10 @@ class MainViewController: UIViewController {
         collectionView.register(CollectionViewCell.nib() , forCellWithReuseIdentifier: CollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
+
+// Personnel Losses View
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.viewHandleTap(_:)))
+        personnelLossesView.addGestureRecognizer(tap)
     }
     
     
@@ -78,8 +83,6 @@ extension MainViewController: UICollectionViewDelegate {
         // need to save index for transfering the precise data
         orcsManager.idForSelectedCard = indexPath.item
         
-   //     print(orcsLossesInfo![Int(indexPath.item)])
-        
         DispatchQueue.main.async {
             self.performSegue(withIdentifier: "goToDetailsScreen", sender: nil)
         }
@@ -118,6 +121,20 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     
 }
 
+
+//MARK: - Personnel View
+
+extension MainViewController {
+    
+    // triggered when viewHandleTap is called
+    @objc func viewHandleTap(_ sender: UITapGestureRecognizer) {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "goToDetailsScreen", sender: nil)
+        }
+    }
+    
+}
+
 //MARK: - Segue
 
 extension MainViewController {
@@ -125,12 +142,24 @@ extension MainViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToDetailsScreen" {
             let destinationVC = segue.destination as! DetailsViewController
+            
+            destinationVC.detailsManager.dayOfInvasion = orcsManager.infoForChosenDay?.0.day
+            
             if let elementId = orcsManager.idForSelectedCard {
+                
+                // reset id
+                orcsManager.idForSelectedCard = nil
                 
                 // (Personnel, [Equipment])
                 destinationVC.detailsManager.nameOfSubject = orcsManager.infoForChosenDay?.1[elementId].title
                 destinationVC.detailsManager.numberOfLosses = orcsManager.infoForChosenDay?.1[elementId].stringAmount
                 destinationVC.detailsManager.subjectImage = orcsManager.infoForChosenDay?.1[elementId].image
+            } else {
+                
+                // If the clicked element is Personnel View
+                destinationVC.detailsManager.nameOfSubject = orcsManager.infoForChosenDay?.0.title
+                destinationVC.detailsManager.numberOfLosses = orcsManager.infoForChosenDay?.0.stringAmount
+                destinationVC.detailsManager.subjectImage = orcsManager.infoForChosenDay?.0.backgroundImageName
             }
             
         }
