@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gzs-zF-7M1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="fBg-bp-dBT">
+            <objects>
+                <viewController id="gzs-zF-7M1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LBk-jB-fzE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camouflageLaunch" translatesAutoresizingMaskIntoConstraints="NO" id="Yvb-qz-3bs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-40" translatesAutoresizingMaskIntoConstraints="NO" id="IRi-yN-UQe">
+                                <rect key="frame" x="79" y="314" width="256" height="268.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orc" translatesAutoresizingMaskIntoConstraints="NO" id="Dvi-qf-1bF">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="256"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="256" id="PhA-uA-R3j"/>
+                                            <constraint firstAttribute="width" constant="256" id="zh7-EJ-MOY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="orcs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyC-BE-COo">
+                                        <rect key="frame" x="81" y="216" width="94" height="52.5"/>
+                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="45"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nxi-Ws-VpW"/>
+                        <color key="backgroundColor" name="MarshColor"/>
+                        <constraints>
+                            <constraint firstItem="IRi-yN-UQe" firstAttribute="centerX" secondItem="LBk-jB-fzE" secondAttribute="centerX" id="H3E-7f-BMg"/>
+                            <constraint firstItem="Yvb-qz-3bs" firstAttribute="leading" secondItem="Nxi-Ws-VpW" secondAttribute="leading" id="Rbv-wh-0rJ"/>
+                            <constraint firstItem="Yvb-qz-3bs" firstAttribute="top" secondItem="LBk-jB-fzE" secondAttribute="top" id="Zax-kW-q4b"/>
+                            <constraint firstItem="Nxi-Ws-VpW" firstAttribute="trailing" secondItem="Yvb-qz-3bs" secondAttribute="trailing" id="flI-72-lpV"/>
+                            <constraint firstItem="IRi-yN-UQe" firstAttribute="centerY" secondItem="LBk-jB-fzE" secondAttribute="centerY" id="gv4-ms-1YR"/>
+                            <constraint firstAttribute="bottom" secondItem="Yvb-qz-3bs" secondAttribute="bottom" id="yHm-j8-v4c"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DSd-Lf-EbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="808"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camouflageLaunch" width="1300" height="1300"/>
+        <image name="orc" width="1024" height="1024"/>
+        <namedColor name="MarshColor">
+            <color red="0.1809999942779541" green="0.21899999678134918" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

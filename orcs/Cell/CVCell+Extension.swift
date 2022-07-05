@@ -15,6 +15,5 @@ class RoundCollectionViewCell: CollectionViewCell {
         set { layer.cornerRadius = newValue }
         get { return layer.cornerRadius }
     }
-    
 
 }

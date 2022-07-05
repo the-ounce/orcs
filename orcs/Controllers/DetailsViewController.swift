@@ -30,7 +30,6 @@ class DetailsViewController: UIViewController {
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
-        // reset elementId
         self.dismiss(animated: true)
     }
     

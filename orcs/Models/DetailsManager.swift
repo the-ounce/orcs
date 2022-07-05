@@ -29,7 +29,7 @@ struct DetailsManager {
 
 //MARK: - TextTemplates
     
-    var textPersonnelTemplate: String  {
+    private var textPersonnelTemplate: String  {
         return
         
 """
@@ -49,7 +49,7 @@ struct DetailsManager {
         
     }
     
-    var textEquipmentTemplate: String  {
+   private var textEquipmentTemplate: String  {
         return
         
 """
@@ -68,7 +68,7 @@ struct DetailsManager {
     
 //MARK: - TextTemplatesDetails
     
-    var equipmentDetails: String {
+   private var equipmentDetails: String {
         switch nameOfSubject {
         case "Літаки": return
 """

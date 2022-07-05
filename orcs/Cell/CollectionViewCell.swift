@@ -19,8 +19,7 @@ class CollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
-
+        
     }
     
     public func configure(with information: Equipment) {
@@ -29,8 +28,6 @@ class CollectionViewCell: UICollectionViewCell {
         titleLabel.text = information.title
         imageView.image = UIImage(named: information.image)
         backgroundImageView.image = UIImage(named: information.image)
-        
-        
     }
     
     static func nib() -> UINib {

@@ -21,7 +21,7 @@
                             <view contentMode="bottom" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boT-Bh-RF1" userLabel="Header View">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camouflage" translatesAutoresizingMaskIntoConstraints="NO" id="RC8-LT-94a">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camouflage" translatesAutoresizingMaskIntoConstraints="NO" id="RC8-LT-94a">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="ЗАГАЛЬНІ ВТРАТИ ПРОТИВНИКА" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Unw-gl-k46">
@@ -425,7 +425,7 @@
         <image name="coffinsBackground" width="572" height="402"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <namedColor name="MarshColor">
-            <color red="0.18123790621757507" green="0.21881955862045288" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.1809999942779541" green="0.21899999678134918" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

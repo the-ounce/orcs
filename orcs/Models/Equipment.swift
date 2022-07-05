@@ -19,10 +19,3 @@ struct Equipment {
 
 }
 
-extension Equipment {
-    
-    func amountIsNil() -> Bool {
-        return amount == nil
-    }
-}
-

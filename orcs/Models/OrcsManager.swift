@@ -39,7 +39,7 @@ struct OrcsManager {
     }
     
     
-    mutating func performDataFetching( ) {
+    mutating private func performDataFetching( ) {
         
         guard let urlPathToEquipment = Bundle.main.url(forResource: "russia_losses_equipment", withExtension: "json") else { return }
         
@@ -61,7 +61,7 @@ struct OrcsManager {
         }
     }
     
-    mutating func parseJSON(personnelData orcsPersonnelData: Data,
+    mutating private func parseJSON(personnelData orcsPersonnelData: Data,
                    equipmentData orcsEquipmentData: Data) -> (Personnel,[Equipment])? {
         let decoder = JSONDecoder()
         
@@ -90,7 +90,7 @@ struct OrcsManager {
     
     
 // MARK: - Create Personnel & Equip Models
-    func createPersonnelModel(_ personnelData: OrcsPersonnelData) -> Personnel {
+    private func createPersonnelModel(_ personnelData: OrcsPersonnelData) -> Personnel {
         
         let personnel = personnelData.info[chosenDay].personnel
         let day = personnelData.info[chosenDay].day
@@ -101,7 +101,7 @@ struct OrcsManager {
         return personnelInfo
     }
     
-    func createEquipmentModel(_ equipData: OrcsEquipmentData) -> [Equipment] {
+    private func createEquipmentModel(_ equipData: OrcsEquipmentData) -> [Equipment] {
             
         let (aircraft,
              helicopter,
