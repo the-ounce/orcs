@@ -44,6 +44,7 @@
 		55530A232870803B00EB23C3 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
 		55530A2B2870C05200EB23C3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		55530A2C2870C05200EB23C3 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		558B7051287572CA008B1582 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		55B78D8B28730729003639A1 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		55B78D8D28731051003639A1 /* DetailsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsManager.swift; sourceTree = "<group>"; };
 		55B78D9128738923003639A1 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
@@ -67,6 +68,8 @@
 		555309EE286F586200EB23C3 = {
 			isa = PBXGroup;
 			children = (
+				558B7051287572CA008B1582 /* README.md */,
+				55B78D9128738923003639A1 /* LICENSE.md */,
 				555309F9286F586200EB23C3 /* orcs */,
 				555309F8286F586200EB23C3 /* Products */,
 			);
@@ -93,7 +96,6 @@
 				55530A03286F586400EB23C3 /* Assets.xcassets */,
 				55B78D942874255B003639A1 /* LaunchScreen.storyboard */,
 				55530A08286F586400EB23C3 /* Info.plist */,
-				55B78D9128738923003639A1 /* LICENSE.md */,
 			);
 			path = orcs;
 			sourceTree = "<group>";
